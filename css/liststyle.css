@@ -1,0 +1,166 @@
+.container {
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header {
+    padding: 25px 0;
+}
+
+nav {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    display: inline;
+    color: #919191;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+nav img {
+    display: none;
+    width: 300px;
+}
+
+.list__card {
+    border: none !important;
+    cursor: pointer;
+}
+
+.list__pokemon__image {
+    height: 300px;
+    background-color: #f2f2f2;
+    padding: 24px;
+}
+
+.card-title {
+    text-transform: capitalize;
+}
+
+.card__text {
+    text-transform: capitalize;
+    padding: 4px 8px;
+    border-radius: 0.25rem;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+
+.card__text__bg__grass {
+    background-color: #9bcc50;
+}
+
+.card__text__bg__fire {
+    background-color: #F08030;
+}
+
+.card__text__bg__water {
+    background-color: #6890F0;
+}
+
+.card__text__bg__bug {
+    background-color: #A8B820;
+}
+
+.card__text__bg__normal {
+    background-color: #A8A878;
+}
+
+.card__text__bg__poison {
+    background-color: #A040A0;
+}
+
+.card__text__bg__electric {
+    background-color: #F8D030;
+}
+
+.card__text__bg__ground {
+    background-color: #E0C068;
+}
+
+.card__text__bg__fairy {
+    background-color: #EE99AC;
+}
+
+.card__text__bg__fighting {
+    background-color: #C03028;
+}
+
+.card__text__bg__psychic {
+    background-color: #F85888;
+}
+
+.card__text__bg__rock {
+    background-color: #B8A038;
+}
+
+.card__text__bg__ghost {
+    background-color: #705898;
+}
+
+.card__text__bg__ice {
+    background-color: #98D8D8;
+}
+
+.card__text__bg__dragon {
+    background-color: #7038F8;
+}
+
+.card__text__bg__dark {
+    background-color: #705848;
+}
+
+/* Float Shadow */
+.hvr-float-shadow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.hvr-float-shadow:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: "";
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    /* W3C */
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.hvr-float-shadow:hover,
+.hvr-float-shadow:focus,
+.hvr-float-shadow:active {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    /* move the element up by 5px */
+}
+
+.hvr-float-shadow:hover:before,
+.hvr-float-shadow:focus:before,
+.hvr-float-shadow:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
