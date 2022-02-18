@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     width: 100%;
     padding-right: 16px;
@@ -56,47 +60,47 @@ nav img {
 }
 
 .card__text__bg__fire {
-    background-color: #F08030;
+    background-color: #f08030;
 }
 
 .card__text__bg__water {
-    background-color: #6890F0;
+    background-color: #6890f0;
 }
 
 .card__text__bg__bug {
-    background-color: #A8B820;
+    background-color: #a8b820;
 }
 
 .card__text__bg__normal {
-    background-color: #A8A878;
+    background-color: #a8a878;
 }
 
 .card__text__bg__poison {
-    background-color: #A040A0;
+    background-color: #a040a0;
 }
 
 .card__text__bg__electric {
-    background-color: #F8D030;
+    background-color: #f8d030;
 }
 
 .card__text__bg__ground {
-    background-color: #E0C068;
+    background-color: #e0c068;
 }
 
 .card__text__bg__fairy {
-    background-color: #EE99AC;
+    background-color: #ee99ac;
 }
 
 .card__text__bg__fighting {
-    background-color: #C03028;
+    background-color: #c03028;
 }
 
 .card__text__bg__psychic {
-    background-color: #F85888;
+    background-color: #f85888;
 }
 
 .card__text__bg__rock {
-    background-color: #B8A038;
+    background-color: #b8a038;
 }
 
 .card__text__bg__ghost {
@@ -104,11 +108,11 @@ nav img {
 }
 
 .card__text__bg__ice {
-    background-color: #98D8D8;
+    background-color: #98d8d8;
 }
 
 .card__text__bg__dragon {
-    background-color: #7038F8;
+    background-color: #7038f8;
 }
 
 .card__text__bg__dark {
@@ -146,21 +150,4 @@ nav img {
     transition-duration: 0.2s;
     -webkit-transition-property: transform, opacity;
     transition-property: transform, opacity;
-}
-
-.hvr-float-shadow:hover,
-.hvr-float-shadow:focus,
-.hvr-float-shadow:active {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-    /* move the element up by 5px */
-}
-
-.hvr-float-shadow:hover:before,
-.hvr-float-shadow:focus:before,
-.hvr-float-shadow:active:before {
-    opacity: 1;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-    /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }

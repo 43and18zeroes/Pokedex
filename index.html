@@ -10,8 +10,10 @@
 
     <link rel="stylesheet" href="./css/liststyle.css">
     <link rel="stylesheet" href="./css/listyleresponsive.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./css/detailstyle.css">
+    <script src="./js/script.js"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
@@ -27,6 +29,28 @@
             </nav>
         </div>
     </header>
+
+    <div>
+        <button onclick="openpop()" id="pop">pop</button>
+    </div>
+
+    <div class="popup center">
+        <div class="icon">
+            <span class="material-icons-outlined">check</span>
+        </div>
+        <div class="title">
+            Success!!
+        </div>
+        <div class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex possimus alias excepturi sed quas expedita, id
+            in est suscipit nemo, mollitia, quam accusantium ducimus et aperiam iure cum. Atque, odit!
+        </div>
+        <div class="dismiss-btn">
+            <button id="dismiss-popup-btn" onclick="closepop()";>
+                Dismiss
+            </button>
+        </div>
+    </div>
 
     <section class="list__view">
         <div class="container">

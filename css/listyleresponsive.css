@@ -1,14 +1,10 @@
 @media (min-width: 576px) {
-
     .list__pokemon__image {
         height: 250px;
     }
-
 }
 
-
 @media (min-width: 768px) {
-
     header {
         padding: 50px 0;
     }
@@ -16,14 +12,27 @@
     nav img {
         display: inline;
     }
-
 }
 
-
 @media (min-width: 992px) {
-
     .list__pokemon__image {
         height: 300px;
     }
 
+    .hvr-float-shadow:hover,
+    .hvr-float-shadow:focus,
+    .hvr-float-shadow:active {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        /* move the element up by 5px */
+    }
+
+    .hvr-float-shadow:hover:before,
+    .hvr-float-shadow:focus:before,
+    .hvr-float-shadow:active:before {
+        opacity: 1;
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+        /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+    }
 }

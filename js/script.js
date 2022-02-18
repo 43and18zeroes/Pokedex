@@ -44,3 +44,19 @@ function renderPokemonListCardHTML(pokemonName, pokemonImage, pokemonType) {
         </div>
         `;
 }
+
+
+
+
+
+// document.getElementById("pop").addEventListener("click", function() {
+//     document.getElementsByClassName("detail__view__card")[0].classList.add("active");
+// });
+
+function openpop() {
+    document.getElementsByClassName("popup")[0].classList.add("active");
+}
+
+function closepop() {
+    document.getElementsByClassName("popup")[0].classList.remove("active");
+}
