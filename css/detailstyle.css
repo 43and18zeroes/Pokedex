@@ -111,7 +111,7 @@ Exit Icon
 .hover-area:hover .single-icon {
     transition: all .2s ease-in-out;
 }
-</style>
+
 
 /*
 Card Styling
@@ -119,15 +119,11 @@ Card Styling
 
 .detail__header {
     display: flex;
+    justify-content: space-between;
 }
 
 .detail__header h2 {
     font-size: 30px;
-}
-
-#detail-header {
-    display: flex;
-    justify-content: space-between;
 }
 
 .detail__pic__container {
