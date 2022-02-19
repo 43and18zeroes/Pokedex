@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="./css/liststyle.css">
     <link rel="stylesheet" href="./css/listyleresponsive.css">
     <link rel="stylesheet" href="./css/detailstyle.css">
+    <link rel="stylesheet" href="./css/detailstyleresponsive.css">
+
     <script src="./js/script.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
@@ -29,28 +31,27 @@
             </nav>
         </div>
     </header>
-
-    <div>
-        <button onclick="openpop()" id="pop">pop</button>
-    </div>
-
-    <div class="popup center">
-        <div class="icon">
-            <span class="material-icons-outlined">check</span>
+    
+    <div class="popup center shadow card__text__bg__grass">
+        <div class="detail__header" id="detail-header">
+            <h2 id="detailName">
+                Pokemon Name
+            </h2>
+            <div class="hover-area noSelect" onclick="closeDetailView()">
+                <div class="transform-circle"></div>
+                <span class="material-icons-outlined single-icon">close</span>
+            </div>
         </div>
-        <div class="title">
-            Success!!
+        <div class="detail__pic__container">
+            <img src="./img/1.svg" alt="" class="detail__picture" id="detailPicture">
         </div>
-        <div class="description">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex possimus alias excepturi sed quas expedita, id
-            in est suscipit nemo, mollitia, quam accusantium ducimus et aperiam iure cum. Atque, odit!
-        </div>
-        <div class="dismiss-btn">
-            <button id="dismiss-popup-btn" onclick="closepop()";>
-                Dismiss
-            </button>
+        <div class="detail__stats alert alert-secondary">
+            <p>Ability: <span id="detailAbility">Overgrow</span></p>
+            <p>Height: <span id="detailHeight">7</span></p>
+            <p>Weight: <span id="detailWeight">69</span></p>
         </div>
     </div>
+
 
     <section class="list__view">
         <div class="container">
