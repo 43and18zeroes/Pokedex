@@ -70,9 +70,13 @@ function renderPokemonListCardHTML(i, pokemonName, pokemonImage, pokemonType) {
 
 function openDetailView() {
     document.getElementsByClassName("popup")[0].classList.add("active");
+    document.getElementById("bgoverlay").classList.remove("d-none");
+    document.querySelector("body").style.overflow = "auto";
 }
 
 
 function closeDetailView() {
     document.getElementsByClassName("popup")[0].classList.remove("active");
+    document.getElementById("bgoverlay").classList.add("d-none");
+    document.querySelector("body").style.overflow = "visible";
 }
