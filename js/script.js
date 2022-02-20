@@ -54,7 +54,7 @@ function pushSinglePokemonDetails(pokemonName, pokemonImage, pokemonType, pokemo
 
 
 function renderPokemonListCardHTML(i, pokemonName, pokemonImage, pokemonType) {
-    document.getElementById("listPokemonCards").innerHTML += `
+    $("listPokemonCards").innerHTML += `
         <div class="col-12 col-sm-6 col-md-4" onclick="openDetailView(${i})">
             <div class="card mb-4 list__card shadow-sm hvr-float-shadow">
                 <img id="listPokemonImage" class="list__pokemon__image"  src="${pokemonImage}" alt="${pokemonName}">
@@ -68,15 +68,67 @@ function renderPokemonListCardHTML(i, pokemonName, pokemonImage, pokemonType) {
 }
 
 
-function openDetailView() {
+function openPopup() {
     document.getElementsByClassName("popup")[0].classList.add("active");
-    document.getElementById("bgoverlay").classList.remove("d-none");
-    document.querySelector("body").style.overflow = "auto";
+    $("bgoverlay").classList.remove("d-none");
 }
 
 
 function closeDetailView() {
     document.getElementsByClassName("popup")[0].classList.remove("active");
-    document.getElementById("bgoverlay").classList.add("d-none");
-    document.querySelector("body").style.overflow = "visible";
+    $("bgoverlay").classList.add("d-none");
+}
+
+
+function openDetailView(i) {
+    const pokemonName = pokemonDetails[i].name;
+    const pokemonImage = pokemonDetails[i].img;
+    const pokemonType = pokemonDetails[i].type;
+    const pokemonAbility = pokemonDetails[i].ability;
+    const pokemonHeight = pokemonDetails[i].height;
+    const pokemonWeight = pokemonDetails[i].weight;
+
+    renderDetailViewHTML(pokemonName, pokemonImage, pokemonType, pokemonAbility, pokemonHeight, pokemonWeight);
+}
+
+
+function renderDetailViewHTML(pokemonName, pokemonImage, pokemonType, pokemonAbility, pokemonHeight, pokemonWeight) {
+    $("detailPopup").innerHTML = `
+        <div class="detail__header" id="detail-header">
+            <h2 id="detailName">
+                ${pokemonName}
+            </h2>
+            <div class="hover-area noSelect" onclick="closeDetailView()">
+                <div class="transform-circle"></div>
+                <span class="material-icons-outlined single-icon">close</span>
+            </div>
+        </div>
+        <div class="detail__pic__container">
+            <img src="${pokemonImage}" alt="" class="detail__picture" id="detailPicture">
+        </div>
+        <div class="detail__stats alert alert-secondary">
+            <p>Ability: <span id="detailAbility">${pokemonAbility}</span></p>
+            <p>Height: <span id="detailHeight">${pokemonHeight}</span></p>
+            <p>Weight: <span id="detailWeight">${pokemonWeight}</span></p>
+        </div>
+        `;
+
+    styleDetailView(pokemonType);
+    openPopup();
+}
+
+
+function styleDetailView(pokemonType) {
+    const styleDetailViewVar = $("detailPopup");
+
+    styleDetailViewVar.className = '';
+    styleDetailViewVar.classList.add(`popup`);
+    styleDetailViewVar.classList.add(`center`);
+    styleDetailViewVar.classList.add(`shadow`);
+    styleDetailViewVar.classList.add(`card__text__bg__${pokemonType}`);
+}
+
+
+function $(id) {
+    return document.getElementById(id);
 }

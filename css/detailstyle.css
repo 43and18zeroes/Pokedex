@@ -130,6 +130,7 @@ Card Styling
 
 .detail__header h2 {
     font-size: 30px;
+    text-transform: capitalize;
 }
 
 .detail__pic__container {
@@ -139,6 +140,11 @@ Card Styling
 
 .detail__picture {
     width: 200px;
+    max-height: 390px;
+}
+
+.detail__stats p:first-child {
+    text-transform: capitalize;
 }
 
 .detail__stats p:last-child {
